@@ -3,10 +3,11 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import 'animate.css';
-import UseAuth from "../Hooks/UseAuth";
+
 import { useState } from "react";
 import swal from 'sweetalert';
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import UseAuth from "./Hooks/UseAuth";
 
 
 
@@ -14,7 +15,7 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
-    const { createUser, logOut, updateUserProfile, setReload } = UseAuth();
+    const { createUser } =UseAuth();
     const navigate = useNavigate();
 
 
@@ -28,7 +29,7 @@ const Register = () => {
 
     const onSubmit = (data) => {
 
-        const { email, password, name, image } = data;
+        const { email, password} = data;
 
         if (password.length < 6) {
             setRegisterError('Password should be at least 6 characters or longer');
@@ -50,12 +51,7 @@ const Register = () => {
                 swal("Wow!", "Registered successfully! You have to login now ", "success");
                 const user = result.user;
 
-                updateUserProfile(name, image)
-                    .then(
-                        setReload(true)
-                    )
-
-                logOut();
+              
 
 
                 setTimeout(() => {
@@ -79,13 +75,13 @@ const Register = () => {
     };
 
     return (
-
-        <div className=" flex justify-center ">
+    
+        <div style={{backgroundImage:'url("https://i.ibb.co/Bt9HWCD/maxresdefault-13.jpg")'}} className=" flex justify-center ">
           
-            <div className="md:hero w-full lg:min-h-screen bg-base-200">
+            <div className="md:hero w-full lg:min-h-screen b-base-200">
                 <div className="hero-content flex-col ">
 
-                    <div className="card shrink-0 lg:w-[450px] w-full shadow-2xl bg-base-100">
+                    <div className="card shrink-0 lg:w-[450px] w-full shadow-2xl opacity-90 bg-base-100">
                         <div className="text-center ">
                             <h1 className="md:text-4xl text-[28px] mt-5 font-bold">Register now!</h1>
 
@@ -141,11 +137,11 @@ const Register = () => {
                                 {errors.password && <span className="text-red-500 mt-2 text-lg">This field is required</span>}
                             </div>
                             <div className="form-control mt-6">
-                                <input type="submit" className="bg-[#00aeff] text-white font-bold btn hover:bg-[#004274] text-lg" value="Register" />
+                                <input type="submit" className="bg-[#b18b5e] text-white font-bold btn hover:bg-[#004274] text-lg" value="Register" />
                             </div>
                         </form>
                         <div className="md:px-8 px-4 pb-7 font-primary text-center font-medium text-lg md:text-xl">
-                            <p>Already have account? Please <Link className="underline text-[#00aeff] font-semibold text-xl md:text-2xl" to={'/login'}>Login</Link></p>
+                            <p>Already have account? Please <Link className="underline text-[#aa7434] font-semibold text-xl md:text-2xl" to={'/login'}>Login</Link></p>
                         </div>
                     </div>
                 </div>

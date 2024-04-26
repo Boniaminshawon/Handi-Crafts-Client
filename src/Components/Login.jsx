@@ -1,10 +1,9 @@
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import 'animate.css';
-import UseAuth from "../Hooks/UseAuth";
 import SocialLogin from "./SocialLogin";
 import { useState } from "react"
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import UseAuth from "./Hooks/UseAuth";
 
 
 const Login = () => {
@@ -44,13 +43,14 @@ const Login = () => {
 
 
     };
+   
     return (
-        <div className=" flex justify-center ">
-         
-            <div className="md:hero  w-full lg:min-h-screen bg-base-200">
+        <div style={{backgroundImage:'url("https://i.ibb.co/cL7PPK0/maxresdefault-11.jpg")'}} className="bg-opacity-100 flex justify-center bg-no-repeat bg-center bg-cover ">
+
+            <div className="md:hero  w-full lg:min-h-screen  g-base-200">
                 <div className="hero-content flex-col ">
-                    <h2 className="font-primary font-medium md:text-2xl text-xl mb-7 text-center animate-pulse">If you don't have any account. Please <Link className="underline text-[#00aeff] font-semibold text-2xl" to={'/register'}>Register</Link> first, or use social login.</h2>
-                    <div className="card shrink-0 p-0 w-full lg:w-[450px] shadow-2xl bg-base-100">
+                  
+                    <div className="card shrink-0 p-0 w-full lg:w-[450px] shadow-2xl bg-base-100 opacity-90">
 
                         <div className="text-center ">
                             <h1 className="md:text-4xl text-[28px] mt-5 font-bold">Login now!</h1>
@@ -90,15 +90,15 @@ const Login = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <input type="submit" className="bg-[#00aeff] text-white font-bold btn hover:bg-[#004274] text-lg" value="Login" />
+                                <input type="submit" className="bg-[#b18b5e] text-white font-bold btn hover:bg-[#004274] text-lg" value="Login" />
                             </div>
                         </form>
                         <div className="pl-8 pb-7 font-primary font-medium text-lg text-center md:text-xl">
-                            <p>Don't have account? Please <Link className="underline text-[#00aeff] font-semibold text-xl md:text-2xl" to={'/register'}>Register</Link></p>
+                            <p>Don't have account? Please <Link className="underline text-[#aa7434] font-semibold text-xl md:text-2xl" to={'/register'}>Register</Link></p>
                         </div>
                         <hr />
                         <div className="font-primary md:text-xl text-lg text-center mt-3 mb-7 font-bold">
-                            <p className="text-[#004274]"> Continue with Social login</p>
+                            <p className="text-[#aa7434]"> Continue with Social login</p>
                             <SocialLogin></SocialLogin>
                         </div>
                     </div>
