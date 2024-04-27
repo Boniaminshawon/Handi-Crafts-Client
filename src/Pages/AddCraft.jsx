@@ -1,5 +1,5 @@
 import UseAuth from "../Components/Hooks/UseAuth";
-
+import swal from 'sweetalert';
 
 const AddCraft = () => {
     const { user } = UseAuth();
@@ -19,11 +19,32 @@ const AddCraft = () => {
         const description = form.description.value;
 
         const data = { name, email, item, category, image, stock, customize, price, rating, processing, description };
+
+        fetch('http://localhost:5000/craftItem', {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    swal("Wow!", "You added craft item successfully!", "success");
+                    
+                }
+            });
+
+
+
+
+
         form.reset();
         console.log(data);
     }
     return (
-        <div  className="font-primary bg-no-repeat bg-cover bg-center">
+        <div className="font-primary bg-no-repeat bg-cover bg-center">
             <section className="p-6  ">
                 <form onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-16 p-6 rounded-md shadow-sm dark:bg-gray-50">
@@ -66,9 +87,10 @@ const AddCraft = () => {
                                 <select name="category" className="select border-[#b18b5e] select-bordered  w-full max-w-xs">
 
                                     <option disabled selected>Select One</option>
+                                    <option ></option>
                                     <option>Wooden Furniture & Sculptures</option>
                                     <option>Wooden Home Decor</option>
-                                    <option>cWooden Utensils and Kitchenware</option>
+                                    <option>Wooden Utensils and Kitchenware</option>
                                     <option>Jute Home Decor</option>
                                     <option>Jute Kitchenware & utensils</option>
                                     <option>Jute and wooden jewellery</option>
@@ -91,9 +113,10 @@ const AddCraft = () => {
 
                                     <option disabled selected>Select One</option>
 
+                                    <option></option>
                                     <option> In stock</option>
                                     <option>Made to Order</option>
-                                   
+
                                 </select>
                                 {/* <input name="stock" type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" /> */}
                             </div>
@@ -106,9 +129,10 @@ const AddCraft = () => {
 
                                     <option disabled selected>Select One</option>
 
+                                    <option></option>
                                     <option>Yes</option>
                                     <option>No</option>
-                                 
+
                                 </select>
                                 {/* <input name="customize" type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" /> */}
                             </div>
