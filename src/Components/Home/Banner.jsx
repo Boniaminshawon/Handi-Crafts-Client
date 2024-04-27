@@ -5,9 +5,12 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 
 
+
 const Banner = () => {
+   
     return (
-        <div className="">
+        <div className=" 
+        font-primary">
             <Swiper
                 loop={true}
                 autoplay={{
@@ -21,21 +24,31 @@ const Banner = () => {
             >
 
 
-
-
-                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/cYnPzMW/maxresdefault-4.jpg")' }} className="bg-center bg-cover  bg-no-repeat h-[85vh]"></div></SwiperSlide>
+                {/* handmade arts and crafts according to your needs */}
+                {/* Wooden Hand Craft Elegance in Art */}
+                {/* Designed by artists, made by us, just for you. */}
+                {/* CREATED BY HAND.
+CREATED WITH LOVE.
+Manufactura is clean & responsive WordPress theme exclusively built for wood, leather and other handmade product crafters. */}
+                {/* What we learned so far
+WE BELIEVE THE BEST IDEAS EMERGE FROM THE SIMPLEST TOOLS */}
+                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/cYnPzMW/maxresdefault-4.jpg")' }} className="bg-center bg-cover  bg-no-repeat h-[85vh] flex flex-col justify-center items-center">
+                    <h1 className="text-5xl font-heading font-bold"> CREATED BY HAND ,
+                        CREATED WITH LOVE.</h1>
+                        <p className="my-5">Manufactura is clean & responsive WordPress theme exclusively built for wood, leather and other handmade product crafters.</p>
+                </div></SwiperSlide>
 
                 <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/QnWJHYS/maxresdefault-7.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
 
-                      
+
                 <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/xGrJztL/maxresdefault-8.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
 
 
                 <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/q0VyfR3/360-F-677438536-Kd-Qws7lj-Ro6-MRd-Jdq-Bl-WLif-WRn-NTS1-Rt.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
 
-                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/xFLdMfm/shkatulka-serdechko-s-gravirovkoj-2147464153.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
-   
-        
+                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/xFLdMfm/shkatulka-serdechko-s-gravirovkoj-2147464153.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]">Best modern wood handmade and crafty art collection</div></SwiperSlide>
+
+
 
 
 

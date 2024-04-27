@@ -15,7 +15,7 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
-    const { createUser } =UseAuth();
+    const { createUser, updateUserProfile, setReload, logOut } = UseAuth();
     const navigate = useNavigate();
 
 
@@ -29,7 +29,7 @@ const Register = () => {
 
     const onSubmit = (data) => {
 
-        const { email, password} = data;
+        const { email, password, name, image } = data;
 
         if (password.length < 6) {
             setRegisterError('Password should be at least 6 characters or longer');
@@ -51,7 +51,12 @@ const Register = () => {
                 swal("Wow!", "Registered successfully! You have to login now ", "success");
                 const user = result.user;
 
-              
+
+                updateUserProfile(name, image)
+                    .then(
+                        setReload(true)
+                    )
+                logOut();
 
 
                 setTimeout(() => {
@@ -75,9 +80,9 @@ const Register = () => {
     };
 
     return (
-    
-        <div style={{backgroundImage:'url("https://i.ibb.co/Bt9HWCD/maxresdefault-13.jpg")'}} className=" flex justify-center ">
-          
+
+        <div style={{ backgroundImage: 'url("https://i.ibb.co/Bt9HWCD/maxresdefault-13.jpg")' }} className=" flex justify-center ">
+
             <div className="md:hero w-full lg:min-h-screen b-base-200">
                 <div className="hero-content flex-col ">
 
