@@ -18,12 +18,25 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to={'/'} className="pl-4  font-extrabold text-[#b18b5e] font-heading text-[28px]">HANDI<span className="text-black">CRAFT</span></Link>
                 </div>
+
+
+
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border border-[#b18b5e] font-semibold'}>
-                            <button className="px-1 text-lg  rounded  ">Home</button> </NavLink></li>
+                    <ul className="menu space-x-6 menu-horizontal px-1">
+                        <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                            <button className=" text-lg  rounded  ">Home</button> </NavLink>
+                        </li>
+                        <li> <NavLink to={'/allCrafts'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                            <button className=" text-lg  rounded  "> All Art & craft</button> </NavLink>
+                        </li>
+                        <li> <NavLink to={'/addCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                            <button className=" text-lg  rounded  ">Add Craft</button> </NavLink>
+                        </li>
+                        <li> <NavLink to={'/myCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                            <button className=" text-lg  rounded  ">My Art & Craft</button> </NavLink>
+                        </li>
 
                     </ul>
                 </div>
@@ -41,12 +54,12 @@ const Navbar = () => {
                                     <img className="rounded-full h-[44px] w-[44px] bg-white" alt="" src={user?.photoURL || "https://i.ibb.co/L1kVMdW/images-removebg-preview.png"} />
                                 </div>
 
-                                
-                                <ul tabIndex={0} className="dropdown-content text-base font-semibold text-white bg-[#b18b5e] z-[1] menu  shadow rounded w-[200px]">
 
-                                <li>Name: { user.displayName || 'User Name not found'} </li>
+                                <ul tabIndex={0} className="dropdown-content sm:text-lg font-semibold text-white bg-[#b18b5e] z-[1] menu  shadow rounded w-[200px]">
+
+                                    <li className="">{user.displayName || 'User Name not found'} </li>
                                     <hr />
-                                    <li> <button onClick={logOut} className="sm:py-2 py-1 px-3 sm:h-[44px] rounded  bg-[#b18b5e] border-white hover:bg-[#004274] sm:text-lg ">Log Out</button></li>
+                                    <li> <button onClick={logOut} className="sm:py-2 py-1 px-3 sm:h-[44px] rounded  bg-[#b18b5e] border-white hover:bg-[#004274]  ">Log Out</button></li>
                                     <hr />
                                 </ul>
                             </div>
@@ -54,7 +67,7 @@ const Navbar = () => {
                         </div>
                         :
 
-                        <div>
+                        <div className="space-x-2">
                             <Link to={'/register'}> <button className="py-1 text-xl sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] btn  sm:text-lg text-white">Registration</button></Link>
                             <Link to={'/login'}> <button className="py-1  text-lg sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] btn  sm:text-lg text-white">Login</button></Link>
                         </div>
