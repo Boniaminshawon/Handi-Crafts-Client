@@ -22,9 +22,6 @@ const CraftSection = ({ craft }) => {
                     </div>
 
                 </div>
-
-
-
             </div>
         </div>
     );

@@ -40,7 +40,7 @@ const AddCraft = () => {
         console.log(data);
     }
     return (
-        <div className="font-primary bg-no-repeat bg-cover bg-center">
+        <div className="font-primary bg-no-repeat bg-cover bg-center my-10 border border-[#b18b5e] rounded">
             <section className="p-6 bg-[#ede6d8 bg-[#faf7f2] bg-[#fdf9f5  ">
                 <form onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-16 p-6 rounded-md shadow-sm ">
