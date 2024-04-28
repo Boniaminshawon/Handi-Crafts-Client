@@ -27,10 +27,26 @@ const Login = () => {
 
             .then(result => {
                 const user = result.user;
+                const name = user.displayName;
+                const email = user.email;
+                const userInfo = { name, email };
 
                 if (user) {
                     navigate(location?.state || '/')
                 }
+
+                fetch('http://localhost:5000/user',{
+                    method:'post',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body:JSON.stringify(userInfo)
+                })
+                .then(res=>res.json())
+                .then(result=>{
+                    console.log(result);
+                })
+
             })
 
             .catch(error => {
@@ -43,13 +59,13 @@ const Login = () => {
 
 
     };
-   
+
     return (
-        <div style={{backgroundImage:'url("https://i.ibb.co/cL7PPK0/maxresdefault-11.jpg")'}} className="bg-opacity-100 flex justify-center bg-no-repeat bg-center bg-cover ">
+        <div style={{ backgroundImage: 'url("https://i.ibb.co/cL7PPK0/maxresdefault-11.jpg")' }} className="bg-opacity-100 flex justify-center bg-no-repeat bg-center bg-cover ">
 
             <div className="md:hero  w-full lg:min-h-screen  g-base-200">
                 <div className="hero-content flex-col ">
-                  
+
                     <div className="card shrink-0 p-0 w-full lg:w-[450px] shadow-2xl bg-base-100 opacity-90">
 
                         <div className="text-center ">

@@ -6,7 +6,7 @@ import UseAuth from "./Hooks/UseAuth";
 
 
 const SocialLogin = () => {
-    const {googleSignIn,githubSignIn}= UseAuth();
+    const { googleSignIn, githubSignIn } = UseAuth();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -15,9 +15,27 @@ const SocialLogin = () => {
         socialProvider()
             .then(result => {
                 const user = result.user;
+                const name = user.displayName;
+                const email = user.email;
+                const userInfo = { name, email };
+
+
                 if (user) {
                     navigate(location?.state || '/')
                 }
+
+
+                fetch('http://localhost:5000/user', {
+                    method: 'post',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+                    .then(res => res.json())
+                    .then(result => {
+                        console.log(result);
+                    })
             })
     }
     return (

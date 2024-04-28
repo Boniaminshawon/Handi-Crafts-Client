@@ -36,10 +36,6 @@ const AddCraft = () => {
                 }
             });
 
-
-
-
-
         form.reset();
         console.log(data);
     }
