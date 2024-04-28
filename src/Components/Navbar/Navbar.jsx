@@ -14,7 +14,18 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e] text-lg font-semibold  ' : 'text-black font-semibold'}>
-                                <button className="px-2  py-1 text-lg  rounded  ">Home</button> </NavLink></li>
+                                <button className="px-2  py-1 text-lg  rounded  ">Home</button> </NavLink>
+                            </li>
+                            <li> <NavLink to={'/allCrafts'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                                <button className=" text-lg  rounded  "> All Art & craft</button> </NavLink>
+                            </li>
+                            <li> <NavLink to={'/addCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                                <button className=" text-lg  rounded  ">Add Craft</button> </NavLink>
+                            </li>
+
+                            <li> <NavLink to={'/myCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
+                                <button className=" text-lg  rounded  ">My Art & Craft</button> </NavLink>
+                            </li>
 
                         </ul>
                     </div>
@@ -28,12 +39,15 @@ const Navbar = () => {
                         <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
                             <button className=" text-lg  rounded  ">Home</button> </NavLink>
                         </li>
+
                         <li> <NavLink to={'/allCrafts'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
                             <button className=" text-lg  rounded  "> All Art & craft</button> </NavLink>
                         </li>
+                        
                         <li> <NavLink to={'/addCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
                             <button className=" text-lg  rounded  ">Add Craft</button> </NavLink>
                         </li>
+
                         <li> <NavLink to={'/myCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
                             <button className=" text-lg  rounded  ">My Art & Craft</button> </NavLink>
                         </li>
