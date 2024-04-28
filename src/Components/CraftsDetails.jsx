@@ -1,4 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import 'animate.css';
 
 
 const CraftsDetails = () => {
@@ -14,11 +15,11 @@ const CraftsDetails = () => {
         <div className="my-10">
             <h1 className="text-4xl font-bold text-center bg-[#faf7f2] py-5 rounded font-heading mb-10">Details of {item}</h1>
             <div className="flex gap-5">
-                <div className="flex-1">
+                <div className="flex-1 animate__slow animate__animated animate__fadeInUpBig">
                     <img className="w-full h-full" src={image} alt="" />
                 </div>
 
-                <div className="flex-1 px-6 pb-6 rounded border-[#b18b5e] border space-y-4">
+                <div className="flex-1 px-6 pb-6 rounded border-[#b18b5e] border space-y-4  animate__animated animate__slow animate__fadeInDownBig">
 
                     <div>
                         <h1 className="text-4xl font-heading1 font-bold text-[#b18b5e]">{item}</h1>
