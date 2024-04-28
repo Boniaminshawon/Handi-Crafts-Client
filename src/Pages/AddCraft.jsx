@@ -12,7 +12,7 @@ const AddCraft = () => {
         const category = form.category.value;
         const image = form.image.value;
         const stock = form.stock.value;
-        const customize = form.name.value;
+        const customize = form.customize.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const processing = form.processing.value;
@@ -45,9 +45,9 @@ const AddCraft = () => {
     }
     return (
         <div className="font-primary bg-no-repeat bg-cover bg-center">
-            <section className="p-6  ">
+            <section className="p-6 bg-[#ede6d8 bg-[#faf7f2] bg-[#fdf9f5  ">
                 <form onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12">
-                    <fieldset className="grid grid-cols-4 gap-16 p-6 rounded-md shadow-sm dark:bg-gray-50">
+                    <fieldset className="grid grid-cols-4 gap-16 p-6 rounded-md shadow-sm ">
                         <div className="space-y-4   col-span-full lg:col-span-1">
 
                             <p className="font-bold text-[#b18b5e] text-2xl text-center font-heading1">Art and Craft Information</p>

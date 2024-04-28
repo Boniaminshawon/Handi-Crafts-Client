@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div className="bg-[#faf7f2] lg:px-16 py-7 md:pt-16 md:pb-10  mt-5 md:mt-11">
+        <div className="bg-[#faf7f2 bg-[#F6F1E7 bg-[#F8F5EF bg-[#ede6d8] lg:px-16 py-7 md:pt-16 md:pb-10  ">
             <div className="flex justify-between">
                 <div className="flex-1 text-center space-y-3">
                     <h3 className="text-[#b18b5e] mb-2 font-bold text-3xl font-heading">HANDICRAFT</h3>

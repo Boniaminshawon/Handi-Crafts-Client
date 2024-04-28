@@ -9,7 +9,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const Banner = () => {
    
     return (
-        <div className=" 
+        <div className="  
         font-primary">
             <Swiper
                 loop={true}
