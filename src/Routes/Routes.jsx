@@ -20,13 +20,13 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/craftItem')
+                loader: () => fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem')
 
             },
             {
                 path: '/:id',
                 element: <PrivateRoute><CraftsDetails></CraftsDetails></PrivateRoute>,
-                loader: ({ params })=>fetch(`http://localhost:5000/craftItem/${params.id}`)
+                loader: ({ params })=>fetch(` https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem/${params.id}`)
             },
             {
                 path: '/login',
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             {
                 path: '/allCrafts',
                 element: <AllCrafts></AllCrafts>,
-                loader: () => fetch('http://localhost:5000/craftItem')
+                loader: () => fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem')
             },
             {
                 path: '/addCraft',
@@ -48,13 +48,13 @@ const router = createBrowserRouter([
             {
                 path: '/myCraft',
                 element: <PrivateRoute><MyCraft></MyCraft></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/craftItem')
+                loader: () => fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem')
                
             },
             {
                 path:'myCraft/:id',
                 element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-                loader: ({ params })=>fetch(`http://localhost:5000/craftItem/${params.id}`)
+                loader: ({ params })=>fetch(` https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem/${params.id}`)
             }
 
 

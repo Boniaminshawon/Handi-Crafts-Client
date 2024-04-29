@@ -25,7 +25,7 @@ const SocialLogin = () => {
                 }
 
 
-                fetch('http://localhost:5000/user', {
+                fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/user', {
                     method: 'post',
                     headers: {
                         'content-type': 'application/json'

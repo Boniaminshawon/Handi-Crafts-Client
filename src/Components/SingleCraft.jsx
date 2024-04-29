@@ -19,7 +19,7 @@ const SingleCraft = ({ singleCraft, crafts,setCrafts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/craftItem/${id}`, {
+                fetch(` https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem/${id}`, {
                     method: 'delete',
 
                 })

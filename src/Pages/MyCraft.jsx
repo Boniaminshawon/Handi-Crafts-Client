@@ -21,7 +21,7 @@ const MyCraft = () => {
     }
     useEffect(() => {
 
-        fetch(`http://localhost:5000/myCraftItem/${user?.email}`)
+        fetch(` https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/myCraftItem/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setLoading(true);

@@ -20,7 +20,7 @@ const AddCraft = () => {
 
         const data = { name, email, item, category, image, stock, customize, price, rating, processing, description };
 
-        fetch('http://localhost:5000/craftItem', {
+        fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
