@@ -26,7 +26,7 @@ const UpdatePage = () => {
 
         const updatedData = { name, email, item, category, image, stock, customize, price, rating, processing, description };
 
-        fetch(` https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/craftItem/${_id}`, {
+        fetch(`https://handi-crafts-server.vercel.app/craftItem/${_id}`, {
             method: 'put',
             headers: {
                 'content-type': 'application/json'

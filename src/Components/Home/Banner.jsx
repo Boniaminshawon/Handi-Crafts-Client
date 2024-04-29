@@ -38,15 +38,22 @@ WE BELIEVE THE BEST IDEAS EMERGE FROM THE SIMPLEST TOOLS */}
                         <p className="my-5">Manufactura is clean & responsive WordPress theme exclusively built for wood, leather and other handmade product crafters.</p>
                 </div></SwiperSlide>
 
+                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/5TbpHPS/THESYS-Lookbook-07-Hi20-Ryan20and20-Goodman.webp")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]">Best modern wood handmade and crafty art collection</div></SwiperSlide>
+
                 <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/QnWJHYS/maxresdefault-7.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
-
-
-                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/xGrJztL/maxresdefault-8.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
-
 
                 <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/q0VyfR3/360-F-677438536-Kd-Qws7lj-Ro6-MRd-Jdq-Bl-WLif-WRn-NTS1-Rt.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
 
-                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/xFLdMfm/shkatulka-serdechko-s-gravirovkoj-2147464153.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]">Best modern wood handmade and crafty art collection</div></SwiperSlide>
+
+                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/LP9WCYW/handmade-natural-jute-knitted-items-for-home-decoration-scandinavian-style-beige-tones-no-people-sus.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
+
+                <SwiperSlide><div style={{ backgroundImage: 'url("https://i.ibb.co/VxGTmdh/bohemian-style-decorating-ideas.jpg")' }} className="bg-center bg-cover bg-no-repeat h-[85vh]"></div></SwiperSlide>
+
+
+
+                
+
+              
 
 
 

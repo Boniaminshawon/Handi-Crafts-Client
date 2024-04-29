@@ -35,7 +35,7 @@ const Login = () => {
                     navigate(location?.state || '/')
                 }
 
-                fetch(' https://handi-crafts-server-l5ehf362r-boni-amin-shawons-projects.vercel.app/user',{
+                fetch('https://handi-crafts-server.vercel.app/user',{
                     method:'post',
                     headers:{
                         'content-type':'application/json'
