@@ -35,9 +35,9 @@ const AllCrafts = () => {
                         <tr className="font-semibold text-sm md:text-xl text-[#b18b5e]">
                             <th></th>
                             <th >Item Name</th>
-                            <th>Category</th>
+                            <th className="md:flex hidden">Category</th>
                             <th>Price</th>
-                            <th>Stock Status</th>
+                            <th className="md:flex hidden">Stock Status</th>
                             <th>View</th>
                         </tr>
                     </thead>
@@ -47,9 +47,9 @@ const AllCrafts = () => {
                             <tr className=" text-xs md:text-lg bg-[#fdf9f5] ">
                                 <th>{index + 1}</th>
                                 <td className="font-bold font-heading1">{craft.item}</td>
-                                <td>{craft.category}</td>
+                                <td className="md:flex hidden">{craft.category}</td>
                                 <td>{craft.price}</td>
-                                <td>{craft.stock}</td>
+                                <td className="md:flex hidden">{craft.stock}</td>
                                 <th>
                                     <Link to={`/${craft._id}`}><button className=" bg-[#b18b5e] py-1 px-2 text-white rounded font-medium ">Details</button></Link>
                                 </th>

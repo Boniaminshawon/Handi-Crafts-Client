@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
+import { Tooltip } from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 
 const CraftSection = ({ craft }) => {
-    const { _id,item, image, stock, category,price } = craft;
+    const { _id, item, image, stock, category, price } = craft;
 
 
     return (
         <div>
-            <div className="flex flex-col font-heading1  p-6  overflow-hidden rounded-lg shadow-md bg-[#faf7f2]">
+            <div
+                data-tooltip-id="my-tooltip" data-tooltip-content={item}
+                className="flex flex-col font-heading1  p-6  overflow-hidden rounded-lg shadow-md bg-[#faf7f2]">
 
                 <div>
                     <h2 className="xl:mb-3 text-lg lg:h-[56px] xl:h-auto font-p  font-semibold">Category: {category}</h2>

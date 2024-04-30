@@ -111,7 +111,7 @@ const Navbar = () => {
                             <div className="dropdown dropdown-bottom dropdown-hover dropdown-end text-black z-10">
 
                                 <div tabIndex={0} role="button" className="w-12 tooltip   tooltip-info tooltip-left z-10 " >
-                                    <img className="rounded-full h-[44px] w-[44px] bg-white" alt="" src={user?.photoURL || "https://i.ibb.co/L1kVMdW/images-removebg-preview.png"} />
+                                    <img className="rounded-full md:h-[44px] md:w-[44px] h-[38px] w-[38px] bg-white" alt="" src={user?.photoURL || "https://i.ibb.co/L1kVMdW/images-removebg-preview.png"} />
                                 </div>
 
 

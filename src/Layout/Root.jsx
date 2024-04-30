@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Home/Footer";
 
 
+
 const Root = () => {
     return (
         <div>

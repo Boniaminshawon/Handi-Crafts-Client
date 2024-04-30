@@ -12,7 +12,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="flex flex-1 md:justify-around justify-between mt-5 md:mt-0 px-3">
+                <div className="flex  flex-1 md:justify-around justify-between mt-5 md:mt-0 px-3">
                     <div className="space-y-3">
                         <h3 className="tracking-wide  uppercase font-primary md:text-xl text-lg font-bold">Product</h3>
                         <ul className="space-y-1 font-primary md:text-lg text-base">

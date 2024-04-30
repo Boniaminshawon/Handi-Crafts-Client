@@ -8,7 +8,7 @@ const Testimonial = () => {
     return (
         <div className="my-10">
             <h1 className="md:text-3xl text-2xl  lg:text-4xl font-bold text-center bg-[#faf7f2]  py-5 rounded font-heading1 mb-6"> People Love Us</h1>
-            <p className="font-p md:text-lg text-base text-center mt-5 mb-10 md:px-10 px-1 lg:px-20">We offer a curated collection of exquisite jute and wooden handicrafts that add warmth, elegance, and a touch of nature's beauty to their homes. Our commitment to exceptional craftsmanship, sustainability, and personalized service ensures that every purchase is not just a product but an experience. With our eco-friendly approach and attention to detail, we've become a trusted destination for those seeking unique and timeless decor pieces that resonate with their values and enhance their living spaces.</p>
+            <p className="font-p md:text-lg text-base text-center mt-5 mb-10 md:px-10 px-1 lg:px-20">We offer a curated collection of exquisite jute and wooden handicrafts that add warmth, elegance, and a touch of nature's beauty to their homes. Our commitment to exceptional craftsmanship, sustainability, and personalized service ensures that every purchase is not just a product but an experience. </p>
 
             <div className="grid md:grid-cols-4 grid-cols-2 gap-4 lg:gap-8 mb-5">
                 <div className="bg-[#f7ede5] font-heading1 shadow-xl  text-xl font-medium text-[#9a6e4a] p-5 text-center">
