@@ -7,7 +7,7 @@ const CraftSection = ({ craft }) => {
 
     return (
         <div>
-            <div className="flex flex-col font-heading1 max-w-lg p-6    overflow-hidden rounded-lg shadow-md bg-[#faf7f2]">
+            <div className="flex flex-col font-heading1  p-6  overflow-hidden rounded-lg shadow-md bg-[#faf7f2]">
 
                 <div>
                     <h2 className="xl:mb-3 text-lg lg:h-[56px] xl:h-auto font-p  font-semibold">Category: {category}</h2>

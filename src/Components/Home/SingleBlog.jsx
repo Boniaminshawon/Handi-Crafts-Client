@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 
 const SingleBlog = ({ blog }) => {
- 
-    const { image, blog_title, writer, date,id } = blog;
-    return (
-        <div className="flex flex-row shadow-xl w-[300px] border rounded border-[#b18b5e] ">
-            <article className="flex flex-col dark:bg-gray-50">
 
-                <img alt="" className="object-cover w-full h-48 dark:bg-gray-500" src={image} />
+    const { image, blog_title, writer, date, id } = blog;
+    return (
+        <div className=" shadow-xl  border rounded border-[#b18b5e] ">
+            <article className="flex flex-col ">
+
+                <div className="">
+                    <img alt="" className="object-cover w-full md:h-48 h-52 " src={image} />
+                </div>
 
                 <div className="flex flex-col flex-1 p-3">
 
@@ -19,7 +21,7 @@ const SingleBlog = ({ blog }) => {
                         <span>{date}</span>
                     </div>
                     <div className="text-center mt-4 ">
-                       <Link  to={`/blogs/${id}`}> <button className="bg-[#b18b5e] px-2 py-1 rounded  text-white">Read More</button></Link>
+                        <Link to={`/blogs/${id}`}> <button className="bg-[#b18b5e] px-2 py-1 rounded  text-white">Read More</button></Link>
                     </div>
                 </div>
             </article>

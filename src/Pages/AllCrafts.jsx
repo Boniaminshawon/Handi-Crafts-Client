@@ -4,14 +4,14 @@ import { Link, useLoaderData } from "react-router-dom";
 const AllCrafts = () => {
     const allCrafts = useLoaderData();
     return (
-        <div className="my-10">
-            <h1 className="text-4xl font-bold text-center bg-[#faf7f2]  py-5 rounded font-heading mb-10"> All Art & Craft Items</h1>
+        <div className="md:my-10 my-6">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center bg-[#faf7f2] md:py-5 py-3 rounded font-heading mb-5 md:mb-10"> All Art & Craft Items</h1>
 
             <div className="overflow-x-auto font-p">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr className="font-semibold text-xl text-[#b18b5e]">
+                        <tr className="font-semibold text-sm md:text-xl text-[#b18b5e]">
                             <th></th>
                             <th >Item Name</th>
                             <th>Category</th>
@@ -23,7 +23,7 @@ const AllCrafts = () => {
                     {
                         allCrafts.map((craft, index) => <tbody key={craft._id}>
 
-                            <tr className=" text-lg bg-[#fdf9f5] ">
+                            <tr className=" text-xs md:text-lg bg-[#fdf9f5] ">
                                 <th>{index + 1}</th>
                                 <td className="font-bold font-heading1">{craft.item}</td>
                                 <td>{craft.category}</td>

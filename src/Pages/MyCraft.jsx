@@ -33,8 +33,8 @@ const MyCraft = () => {
 
 
     return (
-        <div className="my-10">
-            <h1 className="text-4xl font-bold text-center bg-[#faf7f2]  py-5 rounded font-heading mb-5">My added Art & Craft Items : {myCraft.length}</h1>
+        <div className="md:my-10 my-6">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center bg-[#faf7f2]  md:py-5 py-3 rounded font-heading mb-5">My added Art & Craft Items : {myCraft.length}</h1>
 
             <div className="dropdown dropdown-bottom dropdown-hover text-center  flex justify-center">
                 <div tabIndex={0} role="button" className="btn z-[1] m-1 text-2xl font-medium font-p text-white hover:bg-[#b18b5e] bg-[#b18b5e]">Sort By <span><IoMdArrowDropdown></IoMdArrowDropdown></span></div>
@@ -45,7 +45,7 @@ const MyCraft = () => {
                     
                 </ul>
             </div>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
                 {
                     myCraft.map(singleCraft => <SingleCraft crafts={crafts} setCrafts={setCrafts} key={singleCraft._id} singleCraft={singleCraft}></SingleCraft>)
                 }

@@ -43,9 +43,9 @@ const SingleCraft = ({ singleCraft, crafts,setCrafts }) => {
 
 
     return (
-        <div className="flex border-[#b18b5e] font-p border rounded shadow-xl bg-[#fdf9f5] gap-5 p-4 ">
+        <div className="flex flex-col md:flex-row border-[#b18b5e] font-p border rounded shadow-xl bg-[#fdf9f5] gap-5 p-4 ">
             <div>
-                <img className="h-full w-56 rounded" src={image} alt="" />
+                <img className="h-full md:w-56 rounded" src={image} alt="" />
             </div>
             <div className="border border-[#b18b5e] "></div>
             <div className="space-y-2">

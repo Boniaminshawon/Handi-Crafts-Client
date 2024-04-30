@@ -12,9 +12,9 @@ const CraftsDetails = () => {
     }
 
     return (
-        <div className="my-10">
-            <h1 className="text-4xl font-bold text-center bg-[#faf7f2] py-5 rounded font-heading mb-10">Details of {item}</h1>
-            <div className="flex gap-5">
+        <div className="md:my-10 my-6">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center bg-[#faf7f2] md:py-5 py-3 rounded font-heading mb-5 md:mb-10">Details of {item}</h1>
+            <div className="flex flex-col md:flex-row gap-5">
                 <div className="flex-1 animate__slow animate__animated animate__fadeInUpBig">
                     <img className="w-full h-full" src={image} alt="" />
                 </div>
@@ -22,8 +22,8 @@ const CraftsDetails = () => {
                 <div className="flex-1 px-6 pb-6 rounded border-[#b18b5e] border space-y-4  animate__animated animate__slow animate__fadeInDownBig">
 
                     <div>
-                        <h1 className="text-4xl font-heading1 font-bold text-[#b18b5e]">{item}</h1>
-                        <p className="text-xl font-p mt-5">{description}</p>
+                        <h1 className="lg:text-4xl md:text-3xl text-2xl font-heading1 font-bold text-[#b18b5e]">{item}</h1>
+                        <p className="md:text-xl text-lg font-p mt-5">{description}</p>
                     </div>
 
                     <div className="border border-[#b18b5e] my-4 md:my-7"></div>
