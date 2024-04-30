@@ -11,6 +11,7 @@ import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import CraftsDetails from "../Components/CraftsDetails";
 import UpdatePage from "../Pages/UpdatePage";
 import BlogsDetails from "../Components/Home/BlogsDetails";
+import SelectedCat from "../Components/SelectedCat";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
                 path:'/blogs/:id',
                 element:<BlogsDetails></BlogsDetails>,
                 loader: ({ params })=>fetch(`https://handi-crafts-server.vercel.app/blogs/${params.id}`)
+            },
+            {
+                path:'/subCategories/:name',
+                element:<SelectedCat></SelectedCat>,
+                loader: ({ params })=>fetch(`https://handi-crafts-server.vercel.app/subCategories/${params.name}`)
             }
 
 

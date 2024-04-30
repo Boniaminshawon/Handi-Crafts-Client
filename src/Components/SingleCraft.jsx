@@ -49,7 +49,7 @@ const SingleCraft = ({ singleCraft, displayMyCart, setDisplayMyCart }) => {
                 <img className="h-full md:w-56 rounded" src={image} alt="" />
             </div>
             <div className="border border-[#b18b5e] "></div>
-            <div className="space-y-2">
+            <div className="space-y-2 flex-1">
                 <p className="text-xl font-semibold text-[#b18b5e] font-heading1">{item}</p>
 
                 <p className="text-lg  "><span className="  font-medium mr-2">Price:</span> {price}</p>
@@ -61,8 +61,8 @@ const SingleCraft = ({ singleCraft, displayMyCart, setDisplayMyCart }) => {
                 <p className="text-lg  "><span className="  font-medium mr-2">Customization:</span> {customize}</p>
 
                 <div className="flex gap-8">
-                    <Link to={`/myCraft/${_id}`}><button className="bg-green-400 py-1 px-3 text-white rounded">Update</button></Link>
-                    <button onClick={() => handleDelete(_id)} className="bg-red-500   py-1 px-3 text-white rounded">Delete</button>
+                    <Link to={`/myCraft/${_id}`}><button className="bg-green-600 py-1 px-3 text-white rounded">Update</button></Link>
+                    <button onClick={() => handleDelete(_id)} className="bg-red-600   py-1 px-3 text-white rounded">Delete</button>
                 </div>
             </div>
         </div>

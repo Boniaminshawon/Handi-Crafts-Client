@@ -5,6 +5,7 @@ import Blogs from "./Blogs";
 import Testimonial from "./Testimonial";
 import { useEffect, useState } from "react";
 import Loader from "../Loader";
+import SubCat from "./SubCat";
 
 
 
@@ -47,6 +48,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <SubCat></SubCat>
 
             <Blogs ></Blogs>
             <Testimonial></Testimonial>
