@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
+                // loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
 
             },
             {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: '/allCrafts',
                 element: <AllCrafts></AllCrafts>,
-                loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
+                // loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
             },
             {
                 path: '/addCraft',
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: '/myCraft',
                 element: <PrivateRoute><MyCraft></MyCraft></PrivateRoute>,
-                loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
+                // loader: () => fetch('https://handi-crafts-server.vercel.app/craftItem')
                
             },
             {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path:'/blogs/:id',
                 element:<BlogsDetails></BlogsDetails>,
-                loader: () => fetch('/blogs.json')
+                loader: ({ params })=>fetch(`https://handi-crafts-server.vercel.app/blogs/${params.id}`)
             }
 
 

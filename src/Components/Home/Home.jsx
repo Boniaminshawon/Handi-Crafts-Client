@@ -3,14 +3,35 @@ import Banner from "./Banner";
 import CraftSection from "./CraftSection";
 import Blogs from "./Blogs";
 import Testimonial from "./Testimonial";
+import { useEffect, useState } from "react";
+import Loader from "../Loader";
 
 
 
 
 const Home = () => {
 
-    const allCrafts = useLoaderData();
-    
+    // const allCrafts = useLoaderData();
+    const [loading, setLoading] = useState(true);
+    const [allCrafts, setAllCrafts] = useState([])
+
+
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://handi-crafts-server.vercel.app/craftItem')
+            .then(res => res.json())
+            .then(data => {
+
+                setAllCrafts(data);
+                setLoading(false)
+
+            })
+
+    }, []);
+    if (loading) {
+        return <Loader></Loader>
+    }
+
 
     return (
         <div>

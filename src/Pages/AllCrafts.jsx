@@ -1,8 +1,29 @@
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import Loader from "../Components/Loader";
 
 
 const AllCrafts = () => {
-    const allCrafts = useLoaderData();
+    // const allCrafts = useLoaderData();
+    const [loading, setLoading] = useState(true);
+    const [allCrafts, setAllCrafts] = useState([])
+
+
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://handi-crafts-server.vercel.app/craftItem')
+            .then(res => res.json())
+            .then(data => {
+                
+                setAllCrafts(data);
+                setLoading(false)
+
+            })
+
+    }, []);
+    if (loading) {
+        return <Loader></Loader>
+    }
     return (
         <div className="md:my-10 my-6">
             <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center bg-[#faf7f2] md:py-5 py-3 rounded font-heading mb-5 md:mb-10"> All Art & Craft Items</h1>

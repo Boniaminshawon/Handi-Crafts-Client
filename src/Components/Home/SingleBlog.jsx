@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SingleBlog = ({ blog }) => {
 
-    const { image, blog_title, writer, date, id } = blog;
+    const { image, blog_title, writer, date, _id } = blog;
     return (
         <div className=" shadow-xl  border rounded border-[#b18b5e] ">
             <article className="flex flex-col ">
@@ -21,7 +21,7 @@ const SingleBlog = ({ blog }) => {
                         <span>{date}</span>
                     </div>
                     <div className="text-center mt-4 ">
-                        <Link to={`/blogs/${id}`}> <button className="bg-[#b18b5e] px-2 py-1 rounded  text-white">Read More</button></Link>
+                        <Link to={`/blogs/${_id}`}> <button className="bg-[#b18b5e] px-2 py-1 rounded  text-white">Read More</button></Link>
                     </div>
                 </div>
             </article>

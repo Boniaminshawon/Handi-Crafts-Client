@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const SingleCraft = ({ singleCraft, crafts,setCrafts }) => {
+const SingleCraft = ({ singleCraft, myCraft, setMyCraft }) => {
     const { _id, item, image, stock, rating, price, processing, customize } = singleCraft;
-    
+    console.log(myCraft)
     const handleDelete = (id) => {
         console.log(id)
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: "You want to delete this!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -32,10 +32,11 @@ const SingleCraft = ({ singleCraft, crafts,setCrafts }) => {
                                 icon: "success"
 
                             })
-                            const remainingCrafts = crafts.filter(craft => craft._id !== id);
-                            setCrafts(remainingCrafts);
+                            const remainingCrafts = myCraft.filter(craft => craft._id !== id);
+                            setMyCraft(remainingCrafts);
+                            console.log(myCraft);
                         }
-                     
+
                     });
             }
         });

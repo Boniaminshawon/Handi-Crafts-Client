@@ -1,11 +1,8 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaPenNib } from "react-icons/fa";
 
 const BlogsDetails = () => {
-    const blogs = useLoaderData();
-    const { id } = useParams();
-    const blog = blogs.find(blog => blog.id == id);
-    console.log(blog)
+    const blog = useLoaderData();
 
     const navigate = useNavigate();
 

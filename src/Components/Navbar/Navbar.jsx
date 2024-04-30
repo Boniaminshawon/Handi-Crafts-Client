@@ -23,7 +23,7 @@ const Navbar = () => {
         }
 
     }
-    console.log(theme)
+ 
     return (
         <div>
             <div className="navbar fixed z-10 bg-[#f9f7f2 font-primary text-white                bg-[#faf7f2 bg-[#F8F5EF bg-[#ede6d8 bg-[#F6F1E7]">

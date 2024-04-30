@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SingleBlog from "./SingleBlog";
+import Loader from "../Loader";
 
 
 
@@ -7,17 +8,22 @@ import SingleBlog from "./SingleBlog";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
-
-        fetch('/blogs.json')
+        setLoading(true);
+        fetch('https://handi-crafts-server.vercel.app/blogs')
             .then(res => res.json())
             .then(data => {
 
                 setBlogs(data);
+                setLoading(false);
 
             })
 
     }, [])
+    if (loading) {
+        return <Loader></Loader>
+    }
 
 
 

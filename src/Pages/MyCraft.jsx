@@ -3,34 +3,36 @@ import UseAuth from "../Components/Hooks/UseAuth";
 import { useEffect, useState } from "react";
 import SingleCraft from "../Components/SingleCraft";
 import Loader from "../Components/Loader";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const MyCraft = () => {
 
-    const allCrafts = useLoaderData();
-    const [crafts, setCrafts] = useState(allCrafts);
+    // const allCrafts = useLoaderData();
+    // const [crafts, setCrafts] = useState(allCrafts);
 
 
     const [myCraft, setMyCraft] = useState([]);
     const [loading, setLoading] = useState(true);
     const { user } = UseAuth() || {};
 
-    if (loading) {
-        <Loader></Loader>
-    }
-    useEffect(() => {
 
+    useEffect(() => {
+        setLoading(true);
         fetch(`https://handi-crafts-server.vercel.app/myCraftItem/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                setLoading(true);
+
                 setMyCraft(data);
+                setLoading(false)
 
             })
 
-    }, [user])
+    }, [user]);
 
+    if (loading) {
+        return <Loader></Loader>
+    }
 
     return (
         <div className="md:my-10 my-6">
@@ -41,13 +43,13 @@ const MyCraft = () => {
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40 font-medium text-lg">
                     <li className="border-b border-[#b18b5e]"><a> Yes</a></li>
                     <li className=""><a>No</a></li>
-                   
-                    
+
+
                 </ul>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
                 {
-                    myCraft.map(singleCraft => <SingleCraft crafts={crafts} setCrafts={setCrafts} key={singleCraft._id} singleCraft={singleCraft}></SingleCraft>)
+                    myCraft.map(singleCraft => <SingleCraft myCraft={myCraft} setMyCraft={setMyCraft} key={singleCraft._id} singleCraft={singleCraft}></SingleCraft>)
                 }
             </div>
         </div>

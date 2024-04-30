@@ -4,6 +4,7 @@ import 'animate.css';
 
 const CraftsDetails = () => {
     const craft = useLoaderData();
+    
     const { item, image, stock, category, price, description, rating, customize, processing } = craft;
 
     const navigation = useNavigate();
