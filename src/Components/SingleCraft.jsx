@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const SingleCraft = ({ singleCraft, myCraft, setMyCraft }) => {
+const SingleCraft = ({ singleCraft, displayMyCart, setDisplayMyCart }) => {
     const { _id, item, image, stock, rating, price, processing, customize } = singleCraft;
-    console.log(myCraft)
+   
     const handleDelete = (id) => {
         console.log(id)
         Swal.fire({
@@ -32,9 +32,9 @@ const SingleCraft = ({ singleCraft, myCraft, setMyCraft }) => {
                                 icon: "success"
 
                             })
-                            const remainingCrafts = myCraft.filter(craft => craft._id !== id);
-                            setMyCraft(remainingCrafts);
-                            console.log(myCraft);
+                            const remainingCrafts = displayMyCart.filter(craft => craft._id !== id);
+                            setDisplayMyCart(remainingCrafts);
+                           
                         }
 
                     });

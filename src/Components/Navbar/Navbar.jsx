@@ -10,7 +10,7 @@ const Navbar = () => {
     useEffect(() => {
         localStorage.setItem('theme', theme);
         const localTheme = localStorage.getItem('theme');
-        document.querySelector('html').setAttribute('data-theme',localTheme)
+        document.querySelector('html').setAttribute('data-theme', localTheme)
 
     }, [theme])
 
@@ -23,7 +23,7 @@ const Navbar = () => {
         }
 
     }
- 
+
     return (
         <div>
             <div className="navbar fixed z-10 bg-[#f9f7f2 font-primary text-white                bg-[#faf7f2 bg-[#F8F5EF bg-[#ede6d8 bg-[#F6F1E7]">
@@ -32,8 +32,8 @@ const Navbar = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 space-y-2 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e] text-lg font-semibold  ' : 'text-black font-semibold'}>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 space-y-2 z-[1] p-2 shadow bg-base-100 rounded-box w-44">
+                            <li> <NavLink to='/' className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e] text-lg font-semibold  ' : 'text-black font-semibold border bg-gray-200 border-[#b18b5e]'}>
                                 <button className="px-2  py-1 text-lg  rounded  ">Home</button> </NavLink>
                             </li>
                             <li> <NavLink to={'/allCrafts'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
@@ -46,11 +46,27 @@ const Navbar = () => {
                             <li> <NavLink to={'/myCraft'} className={({ isActive }) => isActive ? 'rounded bg-[#b18b5e]  font-semibold' : 'text-black border bg-gray-200 border-[#b18b5e] font-semibold'}>
                                 <button className=" text-lg  rounded  ">My Art & Craft</button> </NavLink>
                             </li>
+                            <li>
+                            <div className="w-full ">
+                                <Link to={'/register'} className="w-f"> <button className=" py-1 text-sm sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] w-full  xl:text-lg md:text-base text-white">Sign Up</button></Link>
+
+                            </div>
+                            </li>
+                            <li>
+                                <label className=" cursor-pointer gap-2 text-black ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
+
+                                    <input
+                                        onChange={handleToggle}
+                                        type="checkbox" className="toggle theme-controller" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                                </label>
+                            </li>
 
                         </ul>
                     </div>
-                    <Link to={'/'} className="xl:pl-4  font-extrabold text-[#b18b5e] font-heading text-lg md:text-2xl xl:text-[28px]">HANDI<span className="text-black">CRAFT</span></Link>
-                  
+                    <Link to={'/'} className="xl:pl-4  font-extrabold text-[#b18b5e] font-heading text-xl md:text-2xl xl:text-[28px]">HANDI<span className="text-black">CRAFT</span></Link>
+
                 </div>
 
 
@@ -79,7 +95,7 @@ const Navbar = () => {
 
 
                 <div className="navbar-end ">
-                <label className="flex cursor-pointer gap-2 text-black mr-1 md:mr-3 ">
+                    <label className="hidden md:flex cursor-pointer gap-2 text-black mr-1 md:mr-3 ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
 
                         <input
@@ -87,7 +103,7 @@ const Navbar = () => {
                             type="checkbox" className="toggle theme-controller" />
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     </label>
-                  
+
                     {user ?
 
                         <div className="">
@@ -112,12 +128,12 @@ const Navbar = () => {
                         :
 
                         <div className="space-x-2 flex">
-                         <div className="hidden md:flex">
-                         <Link to={'/register'} className=""> <button className=" py-1 text-sm sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] btn  xl:text-lg md:text-base text-white">Sign Up</button></Link>
-                         </div>
-                           <div>
-                           <Link to={'/login'}> <button className="md:py-1  py-[5px] text-sm sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] btn  xl:text-lg md:text-base text-white">Login</button></Link>
-                           </div>
+                            <div className="hidden md:flex">
+                                <Link to={'/register'} className=""> <button className=" py-1 text-sm sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] btn  xl:text-lg md:text-base text-white">Sign Up</button></Link>
+                            </div>
+                            <div>
+                                <Link to={'/login'}> <button className="md:py-1  py-[5px] text-sm sm:py-2 px-3 sm:h-[44px] font-semibold rounded bg-[#b18b5e] md:btn md:bg-[#b18b5e] md:text-white md:rounded  xl:text-lg md:text-base text-white">Login</button></Link>
+                            </div>
                         </div>
                     }
                 </div>
