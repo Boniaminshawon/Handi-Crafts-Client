@@ -2,20 +2,28 @@
 
 ##  Website Live link: <https://handi-crafts.web.app>
 
-### Selected Category: Jute and Wooden Crafts
+## Project Overview:
+This project is a website dedicated to Jute and Wooden Crafts within the Art and Crafts category. Users can browse various jute and wooden handicraft items and view all available data in the "All Art and Crafts" section. Registered users can create and display their own crafts in the "My Art and Craft" section, with the ability to filter their added items. The website includes private routes that require users to log in for access, offering login options via Google and GitHub for convenience. The site is fully responsive, ensuring an optimal experience across all devices. In case of any errors, users will see an error message and can easily navigate back to the home page.
 
-## Features and Characteristics of this website:
+## Key Features :
 
-- This is the Jute and Wooden Crafts related website on Art and Crafts category.
-- Here user will show jute and wooden handicrafts item.
-- A user can show all data in the all art and crafts route. 
-- User can create data and these data he/she can show in the my art and craft route.
-- User can filter his added data in the my craft page.
-- Users can Register and login in this website to get better experience.
-- There have privet route . To visit these route users have to login first.
-- Users can login by google and github.
-- This website is responsive for all device.
-- Unfortunately if create any kind of error users will show a error massage in the error page    and they can come back in the home page.
+### Art and Crafts Display: 
+-  Users can showcase jute and wooden handicraft items under the dedicated Art and Crafts category, providing a comprehensive view of available crafts.
+### User-Created Content:
+- Registered users can create and manage their own crafts, displaying them in the "My Art and Craft" section for personalized showcasing.
+### Authentication and Authorization:
+- Secure login functionality with options to login via Google and GitHub, ensuring access to private routes and a personalized experience.
+### Responsive Design: 
+- The website is fully responsive, offering a seamless browsing experience across various devices, enhancing accessibility and usability for all users.
+
+## Technology:
+- HTML , Tailwind-CSS , React.js , Firebase-auth , node.js , express.js , Mongodb-atlas . 
+
+
+
+
+
+  
 
 
 
