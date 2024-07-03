@@ -17,8 +17,13 @@ This project is a website dedicated to Jute and Wooden Crafts within the Art and
 - The website is fully responsive, offering a seamless browsing experience across various devices, enhancing accessibility and usability for all users.
 
 ## Technology:
-- HTML , Tailwind-CSS , React.js , Firebase-auth , node.js , express.js , Mongodb-atlas . 
+- HTML , Tailwind-CSS , React.js , Firebase-auth , swiper-slider , react-helmet, react-hook-form , react-hot-toast, switealeart . 
 
+## How to set Up the project locally:
+- Clone this repository
+- Install npm
+- Install and login firebase
+- npm run dev in your terminal .
 
 
 
